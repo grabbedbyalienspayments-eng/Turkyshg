@@ -2,9 +2,9 @@
   <!-- fundal transparent -->
   <rect width="512" height="512" fill="none"/>
 
-  <!-- stea turcească -->
+  <!-- stea turcească mare, centrată -->
   <polygon 
     fill="#C8102E" 
-    points="256,100 280,200 380,200 300,260 330,360 256,300 182,360 212,260 132,200 232,200"
+    points="256,40 300,200 472,200 332,296 380,472 256,364 132,472 180,296 40,200 212,200"
   />
 </svg>
