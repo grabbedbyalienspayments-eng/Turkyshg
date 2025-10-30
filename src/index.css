@@ -1,3 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Font Family Global Settings */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings use Playfair Display */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  /* Paragraphs - Enhanced readability */
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: -0.011em;
+  }
+
+  /* Links - Subtle enhancement */
+  a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.011em;
+  }
+
+  /* Buttons - Medium weight for clarity */
+  button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.011em;
+  }
+
+  /* Input fields - Clear and readable */
+  input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.011em;
+  }
+
+  /* Labels - Medium weight */
+  label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.011em;
+  }
+
+  /* Small text - Slightly lighter */
+  small, .text-sm, .text-xs {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.008em;
+  }
+
+  /* List items - Clean and readable */
+  ul, ol, li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  /* Strong/Bold text */
+  strong, b {
+    font-weight: 600;
+  }
+
+  /* Code and monospace */
+  code, pre {
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  /* Typography utility classes */
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Enhanced text rendering */
+  .text-premium {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.011em;
+  }
+
+  /* Better line height for body text */
+  .leading-relaxed-premium {
+    line-height: 1.7;
+  }
+
+  /* Improved letter spacing */
+  .tracking-tight-premium {
+    letter-spacing: -0.02em;
+  }
+}
