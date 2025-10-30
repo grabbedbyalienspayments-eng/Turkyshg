@@ -33,17 +33,21 @@ export default function Contact() {
     }
 
     try {
-      const formDataToSend = new URLSearchParams();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
-      });
-
-      const response = await fetch('https://readdy.ai/api/form/d418nd5pa96c2r9goh10', {
+      // Formspree endpoint cu Form ID-ul tău
+      const response = await fetch('https://formspree.io/f/xjkprdor', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
-        body: formDataToSend
+        body: JSON.stringify({
+          nume: formData.nume,
+          telefon: formData.telefon,
+          email: formData.email,
+          tipComanda: formData.tipComanda,
+          mesaj: formData.mesaj,
+          // Subiectul emailului care va fi trimis
+          _subject: `Mesaj nou de la ${formData.nume} - ${formData.tipComanda}`,
+        })
       });
 
       if (response.ok) {
@@ -85,7 +89,7 @@ export default function Contact() {
               Trimite-ne un mesaj
             </h3>
 
-            <form id="contact-form" onSubmit={handleSubmit} data-readdy-form className="space-y-6">
+            <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="nume" className="block text-sm font-medium text-[#1C1C1C] mb-2">
