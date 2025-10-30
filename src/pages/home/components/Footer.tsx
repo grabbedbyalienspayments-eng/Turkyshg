@@ -82,16 +82,7 @@ export default function Footer() {
           <div className="mb-4 md:mb-0">
             <p>&copy; 2024 Saray Kebap Cluj. Toate drepturile rezervate.</p>
           </div>
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://readdy.ai/?origin=logo" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Website Builder
-            </a>
-            <span>•</span>
+          <div className="flex items-center">
             <a 
               href="https://youtube.com/@aaaagency" 
               target="_blank" 
